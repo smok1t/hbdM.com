@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Фоновая музыка с контролем -->
+  <div class="music-control">
+    <button id="toggleMusic">Включить музыку</button>
+    <audio id="bgMusic" loop>
+      <source src="C:\Users\apilj\Desktop\sait\songs\muzon.mp3" type="audio/mpeg">
+      Ваш браузер не поддерживает аудио.
+    </audio>
+  </div>
+
+  <!-- Параллакс-эффект: фон -->
+  <div class="parallax">
+    <div class="parallax-layer layer1"></div>
+    <div class="parallax-layer layer2"></div>
+  </div>
+
+  <!-- Основной контент -->
+  <div class="content">
+    <h1 class="title" id="secretTrigger">Happy Birthday</h1>
+    <p class="message">
+      Привет, жаным! Сегодня особенный день - день, когда на свет появился самый <b>дорогой</b> мне человек. Я хочу поздравить тебя с твоим 17-м днём рождения и сказать, как сильно я тебя люблю.
+<br>
+Жаным, ты - самое прекрасное, что есть в моей жизни. Каждый день, проведённый с тобой, - это счастье, это моменты, которые я хочу хранить в сердце навсегда. Ты делаешь мою жизнь ярче, наполняешь её смыслом и теплом. Я благодарен Всевышнему за то, что он подарил мне тебя, за возможность любить тебя, заботиться о тебе и быть рядом.
+</br>
+Я хочу пожелать тебе бесконечного счастья, крепкого здоровья, успехов во всём, чего бы ты ни пожелала. Пусть в твоей жизни будет как можно больше радостных моментов, пусть твои мечты сбываются, а на пути встречаются только добрые и искренние люди. Пусть Всевышний оберегает тебя, твою семью и дарует вам благополучие.
+<br>
+Ты - моё вдохновение, моя радость, моя любовь. Я обещаю всегда быть рядом, поддерживать тебя во всём, защищать и заботиться о тебе. Я хочу, чтобы ты знала: ты не одна, у тебя всегда есть я - человек, который готов сделать всё ради твоего счастья.
+</br>
+Я надеюсь, что этот день принесёт тебе много приятных эмоций и запомнится надолго. Я старался выбрать для тебя подарок, который покажет, как ты важна для меня. Но знай, что самый главный мой подарок — это моя любовь, моя преданность и моё желание сделать тебя самой счастливой девушкой на свете.
+<br>
+Жаным, ты - моя судьба, и я верю, что впереди у нас будет ещё много совместных дней рождения, которые мы будем праздновать уже как муж и жена, ИншаАллах.
+</br>
+Я люблю тебя безумно, ценю, уважаю и не представляю свою жизнь без тебя. Пусть этот день будет таким же прекрасным, как и ты. <b>БаракАллаху-фик</b>  
+    </p>
+  </div>
+
+  <!-- Секретное сообщение (пасхалка) -->
+  <div id="secretMessage" class="secret-message">
+    <p>Секретное сообщение: Ты самая лучшая!</p>
+  </div>
+
+  <!-- Разделитель -->
+  <div class="divider"></div>
+
+  <!-- Видео-поздравление -->
+  <div class="video-greeting">
+    <video controls width="320">
+      <source src="C:\Users\apilj\Desktop\sait\videos\dream.mp4" type="video/mp4">
+      Ваш браузер не поддерживает видео.
+    </video>
+  </div>
+
+  <!-- Интерактивное пожелание -->
+  <div class="interactive-messages">
+    <h2>Оставь своё пожелание</h2>
+    <form id="messageForm">
+      <input type="text" id="userMessage" placeholder="Ваше пожелание" required>
+      <button type="submit">Отправить</button>
+    </form>
+    <div id="messagesContainer"></div>
+  </div>
+
+  <div class="gallery">
+    <button class="prev" onclick="prevImage()">&#10094;</button>
+    <div class="gallery-container">
+      <img src="C:\Users\apilj\Desktop\sait\images\image2.jpeg" class="gallery-img">
+      <img src="C:\Users\apilj\Desktop\sait\images\image1.jpeg" class="gallery-img">
+      <img src="C:\Users\apilj\Desktop\sait\images\image3.jpeg" class="gallery-img">
+      <img src="C:\Users\apilj\Desktop\sait\images\image4.jpeg" class="gallery-img">
+      <img src="C:\Users\apilj\Desktop\sait\images\image5.jpeg" class="gallery-img">
+    </div>
+    <button class="next" onclick="nextImage()">&#10095;</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
