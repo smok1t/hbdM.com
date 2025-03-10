@@ -5,8 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Birthday</title>
   <link rel="stylesheet" href="styles.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background: #fff;
+    }
+    .heart {
+      position: absolute;
+      color: red;
+      font-size: 50px;
+      animation: fall linear infinite;
+    }
+    @keyframes fall {
+      0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+    }
+  </style>
 </head>
 <body>
+  <script>
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "❤️";
+      document.body.appendChild(heart);
+
+      // Задаём случайный размер и позицию
+      const size = Math.random() * 30 + 30 + "px"; // размер от 30px до 60px
+      heart.style.fontSize = size;
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = Math.random() * 3 + 2 + "s"; // длительность анимации от 2 до 5 секунд
+
+      // Удаляем сердечко после завершения анимации
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }
+
+    // Создаем сердечки каждые 200 мс
+    setInterval(createHeart, 200);
+  </script>
   <!-- Фоновая музыка с контролем -->
   <div class="music-control">
     <button id="toggleMusic">Включить музыку</button>
