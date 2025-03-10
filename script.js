@@ -36,6 +36,27 @@ galleryContainer.addEventListener('touchend', (e) => {
   }
 });
 
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML = "❤️";
+  // Добавляем сердечко в контейнер заднего фона
+  document.getElementById("heart-container").appendChild(heart);
+
+  const size = Math.random() * 30 + 30 + "px"; // Размер от 30px до 60px
+  heart.style.fontSize = size;
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.animationDuration = Math.random() * 3 + 2 + "s"; // от 2 до 5 секунд
+
+  // Удаляем сердечко через 5 секунд
+  setTimeout(() => {
+    heart.remove();
+  }, 5000);
+}
+
+// Запускаем создание сердечек каждые 200 мс
+setInterval(createHeart, 200);
+
 // --- Фоновая музыка ---
 const toggleMusicBtn = document.getElementById("toggleMusic");
 const bgMusic = document.getElementById("bgMusic");
