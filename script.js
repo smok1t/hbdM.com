@@ -1,23 +1,3 @@
-// --- Анимация падающих сердечек ---
-function createHeart() {
-  const heart = document.createElement("div");
-  heart.classList.add("heart");
-  heart.innerHTML = "❤️";
-  document.body.appendChild(heart);
-
-  const size = Math.random() * 30 + 30 + "px"; // Размер от 30px до 60px
-  heart.style.left = Math.random() * 100 + "vw";
-  heart.style.fontSize = size;
-  heart.style.animationDuration = Math.random() * 3 + 2 + "s";
-
-  setTimeout(() => {
-    heart.remove();
-  }, 5000);
-}
-
-// Запускаем сердечки каждые 0.2 секунды
-setInterval(createHeart, 200);
-
 // --- Галерея ---
 let currentIndex = 0;
 const images = document.querySelectorAll(".gallery-img");
